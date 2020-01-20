@@ -34,7 +34,7 @@ class FocalLoss(nn.Module):
 关注`forward`过程，`p`可以理解成分类正确的概率。对于容易的样本，`p`值会比较大，因此`(1-p)`接近0，也就是说，这些容易分类的样本对 loss 的贡献变小了。这是核心的思想。`gamma=2`是提出`Focal Loss`的论文`RetinaNet`的经验之谈。当`gamma=0`时，也就褪化为普通的`CrossEntropyLoss`。
 
 
-### 3 >> 下载
+### 3 >> 资源
 
 + [loss.py](../model/loss.py)
 
