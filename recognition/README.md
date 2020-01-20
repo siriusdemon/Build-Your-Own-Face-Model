@@ -27,7 +27,7 @@ tqdm
 
 ### 训练
 
-天然支持多单机GPU训练
+天然支持单机多GPU训练
 
 ```py
 export CUDA_VISIBLE_DEVICES=0,1
