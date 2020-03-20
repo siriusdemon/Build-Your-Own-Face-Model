@@ -34,7 +34,7 @@ class Config:
     checkpoints = "checkpoints"
     restore = False
     restore_model = ""
-    test_model = "18.pth"
+    test_model = "checkpoints/24.pth"
     
     train_batch_size = 64
     test_batch_size = 60
