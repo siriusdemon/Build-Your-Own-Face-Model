@@ -75,7 +75,7 @@ class DepthWise(nn.Module):
         super().__init__()
         self.net = nn.Sequential(
             ConvBnPrelu(in_c, groups, kernel=(1, 1), stride=1, padding=0),
-            ConvBnPrelu(groups, groups, kernel=kernel, stride=stride, padding=padding， groups=groups),
+            ConvBnPrelu(groups, groups, kernel=kernel, stride=stride, padding=padding，groups=groups),
             ConvBn(groups, out_c, kernel=(1, 1), stride=1, padding=0),
         )
 
@@ -116,7 +116,8 @@ class MultiDepthWiseRes(nn.Module):
 至此，我们完成了六种块的设计，现在我们用这些块来搭建我们的网络结构！
 
 #### 2.2 >> 网络结构
-我们继续往`fmobilenet.py`添加代码
+
+继续往`fmobilenet.py`添加代码
 
 ```py
 class FaceMobileNet(nn.Module):
@@ -160,7 +161,7 @@ class FaceMobilenet(nn.Module):
         # ... emit ...
         self.linear = nn.Linear(2048, embedding_size, bias=False)
 ```
-由于我们的输入是`1 x 128 x 128`，经过多层卷积之后，其变成`512 x 2 x 2`，也就是`2048`。如果你不知道或者你懒得去算输入的图片经过卷积之后的维度是多少，你可以给网终传入一个假数据，报错信息会告诉你这个维度的值。
+由于我们的输入是`1 x 128 x 128`，经过多层卷积之后，其变成`512 x 2 x 2`，也就是`2048`。如果你不知道或者你懒得去算输入的图片经过卷积之后的维度是多少，你可以给网络传入一个假数据，报错信息会告诉你这个维度的值。
 
 另外，这里的`embedding_size`由外部传入，它表示用多大的向量来表示一张人脸。像 Facenet 是使用了128维的向量来表征一张人脸，我们这里使用512。
 

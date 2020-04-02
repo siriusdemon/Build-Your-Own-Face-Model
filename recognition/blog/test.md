@@ -38,7 +38,7 @@ from config import Config as conf
 from model import FaceMobileNet
 ```
 
-由于6000个测试用例中，图片是有重复的，我先获取每一个不重复图片的路径，为了不重复，用集合就可以了！
+由于6000个测试用例中，图片是有重复的。我先获取每一个不重复图片的路径。为了不重复，用集合就可以了！
 ```py
 def unique_image(pair_list) -> set:
     """Return unique image path in pair_list.txt"""
@@ -140,7 +140,7 @@ def threshold_search(y_score, y_true):
 他做了以下的事情：
 
 + 取一对人脸的距离作阈值
-+ 用选好的阈值进行划分，大于此阈值的是不同人的脸，小于此阈值的是同一个人的脸
++ 用选好的阈值进行划分，大于此阈值的是相同人的脸，小于此阈值的是不同人的脸
 + 计算这样子划分的准确率
 + 取下一个人脸的距离作为阈值，直到遍历完成
 + 返回最佳准确率以阈值
