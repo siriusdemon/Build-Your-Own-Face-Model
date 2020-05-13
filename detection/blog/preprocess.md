@@ -339,8 +339,9 @@ class WiderFace(Dataset, VisionKit):
             lm_xs = (lm_xs - bbox[0]) / original_width
             lm_ys = (lm_ys - bbox[1]) / original_height
             for i, lm_x, lm_y in zip(range(5, 14, 2), lm_xs, lm_ys):
-                res[i][x, y] = lm_x
-                res[i+1][x, y] = lm_y
+                res[i][y, x] = lm_x
+                res[i+1][y, x] = lm_y
+        return res
 ```
 由于有些标注只有框，没有关键点，所以用`if`来跳过这些标注。CenterFace 的人脸关键点位置是基于中心点的，不过，如果基于左上角的点，那么`lm_xs`和`lm_ys`就都会是正数，所以我这里是基于左上角的。如果你改成了基于中心点的，那么记得在测试阶段，解码的时候也要相应改哦！
 
