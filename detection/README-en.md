@@ -41,4 +41,4 @@ hm = self.make_heatmaps(im, bboxes, landmarks, self.downscale)
 
 ### Wishes
 
-Anyone who have saw, heard, inspected or use this repo gains temporary happiness and everlasting happiness.
+Anyone who have saw, heard, inspected or used this repo gains temporary happiness and everlasting happiness.
