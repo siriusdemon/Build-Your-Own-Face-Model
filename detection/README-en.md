@@ -2,9 +2,9 @@
 
 For English developer, I still believe this repo will be helpful.
 
-### reading
+### Reading
 
-Codes in this repo are almost self-explained, but I want to suggest that trying to read the code in order will be better.
+Codes in this repo are almost self-explained, but trying to read the codes in order will be better.
 
 - 0: reading the Paper, Centernet, CenterFace, optional Cornernet
 - 1: datasets.py: parsing annotations, image preprocessing, label generating
@@ -14,7 +14,7 @@ Codes in this repo are almost self-explained, but I want to suggest that trying 
 - 5: train.py: training pipeline
 - 6: api.py: inference pipeline
 
-### train your own data
+### Train your own data
 
 Firstly, you are supposed to familiar with the data and annotation format. In WiderFace and other common dataset, the formats are simple.
 
