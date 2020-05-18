@@ -16,7 +16,7 @@ Codes in this repo are almost self-explained, but trying to read the codes in or
 
 ### Train your own data
 
-Firstly, you are supposed to familiar with the data and annotation format. In WiderFace and other common dataset, the formats are simple.
+Firstly, you should be familiar with the data and annotation format. In WiderFace and other common dataset, the formats are simple.
 
 - images: folder contains images
 - annotations: always a txt file
