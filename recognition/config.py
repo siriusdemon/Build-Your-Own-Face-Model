@@ -39,7 +39,7 @@ class Config:
     train_batch_size = 64
     test_batch_size = 60
 
-    epoch = 150
+    epoch = 24
     optimizer = 'sgd'  # ['sgd', 'adam']
     lr = 1e-1
     lr_step = 10
