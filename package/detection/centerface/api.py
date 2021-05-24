@@ -47,7 +47,6 @@ def decode_many(out):
     wh.squeeze_()
     lm.squeeze_()
 
-    print(lm.shape)
     hm = hm.numpy()
     hm[hm < cfg.threshold] = 0
     all_result = []
