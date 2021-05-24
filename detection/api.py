@@ -47,7 +47,7 @@ def decode(out):
     off.squeeze_()
     wh.squeeze_()
     lm.squeeze_()
-    
+
     hm = hm.numpy()
     hm[hm < cfg.threshold] = 0
     xs, ys = np.nonzero(hm)
@@ -57,13 +57,13 @@ def decode(out):
         ow = off[0][x, y]
         oh = off[1][x, y]
         cx = (ow + y) * 4
-        cy = (oh + x) * 4 
+        cy = (oh + x) * 4
 
         w = wh[0][x, y]
         h = wh[1][x, y]
         width = np.exp(w) * 4
         height = np.exp(h) * 4
-        
+
         left = cx - width / 2
         top = cy - height / 2
         right = cx + width / 2
@@ -75,8 +75,8 @@ def decode(out):
         for i in range(0, 10, 2):
             lm_x = lm[i][x, y]
             lm_y = lm[i+1][x, y]
-            lm_x = lm_x * width + left 
-            lm_y = lm_y * height + top 
+            lm_x = lm_x * width + left
+            lm_y = lm_y * height + top
             lms += [lm_x, lm_y]
         landmarks.append(lms)
     return bboxes, landmarks
@@ -87,7 +87,7 @@ def visualize(im, bboxes, landmarks):
 
 
 if __name__ == '__main__':
-    impath = 'samples/d.jpg'
+    impath = 'samples/a.jpg'
     im = Image.open(impath)
     new_im, params = preprocess(im)
     pred = detect(new_im)
